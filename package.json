@@ -1,0 +1,9 @@
+{
+  "name": "start-project",
+  "version": "1.0.0",
+  "description": "Start Typescript Project",
+  "main": "index.js",
+  "repository": "git@github.com:impavelsukhinin/start-project.git",
+  "author": "impavelsukhinin <p.sukhinin@rocketguys.com>",
+  "license": "MIT"
+}
