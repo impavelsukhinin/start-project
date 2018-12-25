@@ -1,3 +1,12 @@
-# Start Project
+# React Typescript Starter Pack
 
-Пук
+Based on Webpack
+
+## Components
+
+* React
+* Typescript
+* PostCSS
+* TSLint
+
+`yarn start` - Then open http://localhost:3000/ to see app
