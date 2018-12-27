@@ -9,4 +9,7 @@ Based on Webpack
 * PostCSS
 * TSLint
 
-`yarn start` - Then open http://localhost:3000/ to see app
+## Start
+
+* `yarn` - Install dependencies
+* `yarn start` - Then open http://localhost:3000/ to see app
