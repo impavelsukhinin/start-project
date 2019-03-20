@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const rules = require('./rules')
 
@@ -51,9 +50,6 @@ const config = {
 			template: 'public/index.html',
 		}),
 	],
-	optimization: {
-		minimizer: [new UglifyJsPlugin()],
-	},
 	output: {
 		pathinfo: true,
 		path: path.resolve(__dirname, 'build'),

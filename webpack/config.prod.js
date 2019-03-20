@@ -1,5 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 const rules = require('./rules')
 
 module.exports = {
@@ -24,14 +26,26 @@ module.exports = {
 			},
 			template: 'public/index.html',
 		}),
+		new CompressionPlugin({
+			test: /\.js(\?.*)?$/i
+		}),
 	],
+	optimization: {
+		minimizer: [new UglifyJsPlugin({
+			uglifyOptions: {
+				warnings: false,
+				output: {
+					comments: false,
+				},
+			},
+			cache: true,
+			parallel: true,
+		})],
+	},
 	module: { rules },
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, '../dist'),
 	},
 	mode: 'production',
-	devServer: {
-		contentBase: '../dist'
-	}
 }
