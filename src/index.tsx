@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// @ts-ignore
 import { AppContainer, setConfig } from 'react-hot-loader'
 import App from 'containers/App'
 
