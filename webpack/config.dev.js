@@ -58,13 +58,11 @@ const config = {
 }
 
 module.exports = (_, { mode }) => {
-	if (mode === 'development') {
-		config.entry.main.unshift(
-			'react-hot-loader/patch',
-			`webpack-dev-server/client?http://${host}:${port}`,
-			'webpack/hot/only-dev-server'
-		)
-	}
+	config.entry.main.unshift(
+		'react-hot-loader/patch',
+		`webpack-dev-server/client?http://${host}:${port}`,
+		'webpack/hot/only-dev-server'
+	)
 
 	config.plugins.push(new webpack.DefinePlugin({
 		'process.env.NODE_ENV': JSON.stringify(mode),
