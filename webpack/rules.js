@@ -15,7 +15,7 @@ module.exports = [
 				loader: 'css-loader',
 				options: {
 					modules: true,
-					localIdentName: '[name]--[local]--[hash:base64:5]',
+					localIdentName: `${process.env.NODE_ENV === 'development' ? '[name]--[local]--' : ''}[hash:base64:5]`,
 					sourceMap: true,
 					importLoaders: 1,
 				},
